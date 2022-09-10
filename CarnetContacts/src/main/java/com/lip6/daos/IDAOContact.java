@@ -7,7 +7,7 @@ import com.lip6.entities.Contact;
 public interface IDAOContact {
 
 	
-	public  boolean addContact(long idContact, String firstname, String lastname, String email);
+	public boolean addContact(String firstname, String lastname, String email);
 	
 	public int deleteContact(long id);
 	

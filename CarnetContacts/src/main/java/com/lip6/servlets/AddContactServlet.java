@@ -39,13 +39,12 @@ public class AddContactServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		long id=Long.parseLong(request.getParameter("id"));
 		String fname=request.getParameter("fname");
 		String lname=request.getParameter("lname");
 		String email=request.getParameter("email"); 
 		
 		ServiceContact src=new ServiceContact();
-		src.createContact(id, fname, lname, email);
+		src.createContact(fname, lname, email);
 		
 		RequestDispatcher rd=request.getRequestDispatcher("main.jsp");
 		rd.forward(request, response);

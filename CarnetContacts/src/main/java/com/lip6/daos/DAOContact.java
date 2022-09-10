@@ -6,8 +6,14 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+
+import com.lip6.entities.Address;
 import com.lip6.entities.Contact;
 import com.lip6.entities.Messages;
+import com.lip6.entities.PhoneNumber;
+import com.lip6.util.JpaUtil;
 
 public class DAOContact implements IDAOContact {
 
@@ -20,30 +26,68 @@ public class DAOContact implements IDAOContact {
 	 * @return renvoit le nouveau contact
 	 */
 	@Override
-	public  boolean addContact(long idContact, String firstname, String lastname, String email) {
-
-		Contact contact = new Contact();
-		contact.setFirstName(firstname);
-		contact.setLastName(lastname);
-		contact.setEmail(email);
-		boolean success=false;
-
-		Connection con = null;
+	public boolean addContact(String firstname, String lastname, String email) {
+		
+		boolean success = false;
 		try {
-			Class.forName(Messages.getString("driver"));
-			con = DriverManager.getConnection(Messages.getString("database"), Messages.getString("username"),
-					Messages.getString("password"));
-			Statement stmt = con.createStatement();
-			String request = "INSERT INTO contacts(id, firstname,lastname,email) VALUES(" + idContact + ", '"
-					+ firstname + "','" + lastname + "','" + email + "')";
-			stmt.executeUpdate(request);
-			stmt.close();
-			con.close();
-			success=true;
+			EntityManager em = JpaUtil.getEmf().createEntityManager();
+			
+			Contact c1 = new Contact("Xavier", "BLANC", "XavierBlanc@gmail.com");
+			Contact c2 = new Contact("Jean", "PIERRE", "JeanPierre@gmail.com");
+
+			PhoneNumber pn1 = new PhoneNumber();
+			PhoneNumber pn2 = new PhoneNumber();
+			PhoneNumber pn3 = new PhoneNumber();
+			Address a1 = new Address();
+			Address a2 = new Address();
+			
+			pn1.setPhoneKind("Samsung");
+			pn1.setPhoneNumber("0742652475");
+			
+			pn2.setPhoneKind("Xiaomi");
+			pn2.setPhoneNumber("0643651284");
+			
+			pn3.setPhoneKind("Apple");
+			pn3.setPhoneNumber("0712774511");
+			
+			a1.setCity("Nanterre");
+			a1.setCountry("France");
+			a1.setStreet("19 rue des arbres");
+			a1.setZip("92000");
+			
+			a2.setCity("Paris");
+			a2.setCountry("France");
+			a2.setStreet("5 avenue de l'elite");
+			a2.setZip("75000");
+			
+			a1.setContact(c1);
+			c1.setAddress(a1);
+			
+			a2.setContact(c2);
+			c2.setAddress(a2);
+			
+			pn1.setContact(c1);
+			pn2.setContact(c1);
+			pn3.setContact(c2);
+			
+			c1.getPhones().add(pn1);
+			c1.getPhones().add(pn2);
+			c2.getPhones().add(pn3);
+			
+			EntityTransaction tx = em.getTransaction();
+			tx.begin();
+			
+			em.persist(c1);
+			em.persist(c2);
+			
+			tx.commit();
+			
+			em.close();
+			success = true;
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 		return success;
 	}
 

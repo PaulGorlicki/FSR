@@ -11,9 +11,6 @@
 			<tr>
 				<th><h2>Voici un premier exemple de composant web avec un servlet</h2></th>
 				<tr>
-					<td><i>id: <input type="text" name="id" size="25"></i></td>
-				</tr>
-				<tr>
 					<td><i>first name: <input type="text" name="fname" size="25"></i></td>
 				</tr>
 				<tr>

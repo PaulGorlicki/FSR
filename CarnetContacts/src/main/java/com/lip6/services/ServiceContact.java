@@ -6,16 +6,16 @@ import com.lip6.entities.Contact;
 
 public class ServiceContact {
 	
-	public void createContact(long id, String fname, String lname, String email) {
+	public void createContact(String fname, String lname, String email) {
 		
 		IDAOContact daoc=new DAOContact();
-		boolean ok=daoc.addContact(id, fname, lname, email);
-		if (ok)
+		boolean success = daoc.addContact(fname, lname, email);
+		if (success) 
 			System.out.println("Contact ajouté!");
-		else
-			System.out.println("Contact non ajouté!");
 		
-	}
+		else 
+			System.out.println("Contact non ajouté!");
+		}
 	
 	public void deleteContact(long id) {
 		
