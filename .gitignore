@@ -1,6 +1,5 @@
 
-build/*
-build/classes/*
+CarnetContacts/build/*
 .metadata/*
 CarnetContacts/.settings/*
 CarnetContacts/src/main/java/META-INF/persistence.xml
