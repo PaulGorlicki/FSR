@@ -1,8 +1,9 @@
-/com/
-/META-INF/
-build/
-.metadata/
-.settings/
-persistence.xml
-drop.sql
-Servers/
+
+build/*
+.metadata/*
+CarnetContacts/.settings/*
+CarnetContacts/src/main/java/META-INF/persistence.xml
+CarnetContacts/src/main/java/META-INF/drop.sql
+Servers/*
+*.jar
+*.log

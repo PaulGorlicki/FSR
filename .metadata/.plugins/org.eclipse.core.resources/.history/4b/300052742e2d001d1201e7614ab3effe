@@ -1,4 +1,0 @@
-driver=com.mysql.jdbc.Driver
-database=jdbc:mysql://20.16.226.142\:3306/fsr
-username=paul
-password=paul123

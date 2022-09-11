@@ -1,9 +1,0 @@
-127.0.0.1 - - [06/Sep/2022:10:22:30 +0200] "GET / HTTP/1.1" 404 681
-0:0:0:0:0:0:0:1 - - [06/Sep/2022:10:22:43 +0200] "POST /CarnetContacts/LoginServlet HTTP/1.1" 404 712
-127.0.0.1 - - [06/Sep/2022:10:25:58 +0200] "GET / HTTP/1.1" 404 681
-0:0:0:0:0:0:0:1 - - [06/Sep/2022:10:26:10 +0200] "POST /CarnetContacts/LoginServlet HTTP/1.1" 200 362
-0:0:0:0:0:0:0:1 - - [06/Sep/2022:10:26:19 +0200] "GET /CarnetContacts/getcontact.jsp HTTP/1.1" 200 523
-0:0:0:0:0:0:0:1 - - [06/Sep/2022:10:26:24 +0200] "POST /CarnetContacts/GetContactServlet HTTP/1.1" 200 362
-0:0:0:0:0:0:0:1 - - [06/Sep/2022:10:26:40 +0200] "GET /CarnetContacts/modifycontact.jsp HTTP/1.1" 200 814
-0:0:0:0:0:0:0:1 - - [06/Sep/2022:10:27:01 +0200] "POST /CarnetContacts/ModifyContactServlet HTTP/1.1" 200 362
-0:0:0:0:0:0:0:1 - - [06/Sep/2022:10:27:13 +0200] "GET /CarnetContacts/getcontact.jsp HTTP/1.1" 200 523

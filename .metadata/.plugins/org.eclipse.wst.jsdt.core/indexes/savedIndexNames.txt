@@ -1,8 +1,0 @@
-INDEX VERSION 1.4+C:\Users\paulg\eclipse-workspace\SFR\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-404484448.index
-3329915694.index
-4027154877.index
-222611508.index
-3268872956.index
-568073344.index
-618612559.index

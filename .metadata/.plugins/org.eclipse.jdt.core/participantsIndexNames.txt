@@ -1,9 +1,0 @@
-INDEX VERSION 1.131
-C:\Users\paulg\eclipse-workspace\SFR\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4027154877.index
-\CarnetContacts\src\main\java
-C:\Users\paulg\eclipse-workspace\SFR\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\419012625.index
-\CarnetContact\src\main\java
-C:\Users\paulg\eclipse-workspace\SFR\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2262078055.index
-\CarnetContacts\src\main\java
-C:\Users\paulg\eclipse-workspace\SFR\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3605016631.index
-\main\java
