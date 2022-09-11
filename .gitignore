@@ -1,1 +1,8 @@
-/.metadata/
+/com/
+/META-INF/
+build/
+.metadata/
+.settings/
+persistence.xml
+drop.sql
+Servers/
