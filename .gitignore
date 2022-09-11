@@ -1,9 +1,14 @@
 
 build/*
+build/classes/*
 .metadata/*
 CarnetContacts/.settings/*
 CarnetContacts/src/main/java/META-INF/persistence.xml
 CarnetContacts/src/main/java/META-INF/drop.sql
+CarnetContacts/.classpath
+CarnetContacts/.project
+CarnetContacts/.tern-project
 Servers/*
 *.jar
 *.log
+RemoteSystemsTempFiles/*
